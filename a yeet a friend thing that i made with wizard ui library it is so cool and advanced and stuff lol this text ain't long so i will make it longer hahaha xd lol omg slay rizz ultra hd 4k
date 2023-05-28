@@ -4,7 +4,11 @@ local PhantomForcesWindow = Library:NewWindow("YaF")
 
 local KillingCheats = PhantomForcesWindow:NewSection("D3STR0YER")
 
+local PortCheats = PhantomForcesWindow:NewSection("Portable Stuff")
+
 local FarmingCheats = PhantomForcesWindow:NewSection("AutoStuff")
+
+local PaidForFreeCheats = PhantomForcesWindow:NewSection("P4F")
 
 KillingCheats:CreateButton("Land Destroyer (sometimes works, forever)", function()
 
@@ -44,32 +48,41 @@ end
 
 end)
 
-KillingCheats:CreateTextbox("Hatch Egg", function(text)
+PortCheats:CreateTextbox("Hatch Egg (WIP)", function(text)
 
 print(text)
 
 end)
 
-KillingCheats:CreateToggle("Auto Ez", function(value)
+FarmingCheats:CreateToggle("Auto Throw (they alr got this)", function(autothrow)
 
-print(value)
+_G.AutoThrow = autothrow
 
-end)
-
-KillingCheats:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
-
-print(text)
-
-end)
-
-KillingCheats:CreateSlider("Slider", 0, 100, 15, false, function(value)
-
-print(value)
+if _G.AutoThrow then
+while wait() do
+   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
+end
 
 end)
 
-KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
+FarmingCheats:CreateToggle("Auto Reward (i think)", function(autoreward)
 
-print(value)
+_G.AutoReward = autoreward
+
+if _G.AutoReward then
+wait(0.4)
+   game:GetService("ReplicatedStorage").Remote.Player.Server.ClaimTimedReward:InvokeServer("DailyReward")
+end
+
+end)
+
+PaidForFreeCheats:CreateToggle("Auto Rebirth", function(autorebirth)
+
+_G.AutoRebirth = autorebirth
+
+if _G.AutoRebirth then
+wait(0.4)
+   game:GetService("ReplicatedStorage").Remote.Player.Server.AttemptRebirth:InvokeServer()
+end
 
 end)
