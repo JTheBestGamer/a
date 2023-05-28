@@ -13,16 +13,14 @@ local PaidForFreeCheats = PhantomForcesWindow:NewSection("P4F")
 KillingCheats:CreateButton("Land Destroyer (sometimes works, forever)", function()
 
 while wait() do
-   game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3)
-end
+game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3) end
 
 end)
 
 KillingCheats:CreateButton("Throw Destroyer (sometimes works, forever)", function()
 
 while wait() do
-   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
-end
+game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer() end
 
 end)
 
@@ -32,9 +30,9 @@ _G.Land = land
 
 if _G.Land then
 while wait() do
-   game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3)
-end
+game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3) end
 
+end
 end)
 
 KillingCheats:CreateToggle("Throw Destroyer (toggle)", function(throw)
@@ -43,9 +41,9 @@ _G.Throw = throw
 
 if _G.Throw then
 while wait() do
-   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
-end
+game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer() end
 
+end
 end)
 
 PortCheats:CreateTextbox("Hatch Egg (WIP)", function(text)
@@ -60,9 +58,9 @@ _G.AutoThrow = autothrow
 
 if _G.AutoThrow then
 while wait() do
-   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
-end
+game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer() end
 
+end
 end)
 
 FarmingCheats:CreateToggle("Auto Reward (i think)", function(autoreward)
@@ -71,9 +69,9 @@ _G.AutoReward = autoreward
 
 if _G.AutoReward then
 wait(0.4)
-   game:GetService("ReplicatedStorage").Remote.Player.Server.ClaimTimedReward:InvokeServer("DailyReward")
-end
+game:GetService("ReplicatedStorage").Remote.Player.Server.ClaimTimedReward:InvokeServer("DailyReward")
 
+end
 end)
 
 PaidForFreeCheats:CreateToggle("Auto Rebirth", function(autorebirth)
@@ -81,8 +79,8 @@ PaidForFreeCheats:CreateToggle("Auto Rebirth", function(autorebirth)
 _G.AutoRebirth = autorebirth
 
 if _G.AutoRebirth then
-wait(0.4)
-   game:GetService("ReplicatedStorage").Remote.Player.Server.AttemptRebirth:InvokeServer()
-end
+wait(0.4) 
+game:GetService("ReplicatedStorage").Remote.Player.Server.AttemptRebirth:InvokeServer()
 
+end
 end)
