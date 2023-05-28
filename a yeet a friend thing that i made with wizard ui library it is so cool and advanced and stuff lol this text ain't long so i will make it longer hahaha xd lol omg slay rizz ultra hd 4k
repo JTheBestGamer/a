@@ -1,0 +1,75 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("YaF")
+
+local KillingCheats = PhantomForcesWindow:NewSection("D3STR0YER")
+
+local FarmingCheats = PhantomForcesWindow:NewSection("AutoStuff")
+
+KillingCheats:CreateButton("Land Destroyer (sometimes works, forever)", function()
+
+while wait() do
+   game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3)
+end
+
+end)
+
+KillingCheats:CreateButton("Throw Destroyer (sometimes works, forever)", function()
+
+while wait() do
+   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
+end
+
+end)
+
+KillingCheats:CreateToggle("Land Destroyer (toggle)", function(land)
+
+_G.Land = land
+
+if _G.Land then
+while wait() do
+   game:GetService("ReplicatedStorage").Remote.Throw.Server.Landed:InvokeServer(9926290.241311073,3)
+end
+
+end)
+
+KillingCheats:CreateToggle("Throw Destroyer (toggle)", function(throw)
+
+_G.Throw = throw
+
+if _G.Throw then
+while wait() do
+   game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer()
+end
+
+end)
+
+KillingCheats:CreateTextbox("Hatch Egg", function(text)
+
+print(text)
+
+end)
+
+KillingCheats:CreateToggle("Auto Ez", function(value)
+
+print(value)
+
+end)
+
+KillingCheats:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
+
+print(text)
+
+end)
+
+KillingCheats:CreateSlider("Slider", 0, 100, 15, false, function(value)
+
+print(value)
+
+end)
+
+KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
+
+print(value)
+
+end)
