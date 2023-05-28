@@ -1,0 +1,9 @@
+if game.PlaceId == idhere then
+   
+end
+
+elseif game.PlaceId == idhere then
+   
+end
+
+print("Who even looks in the console?")
