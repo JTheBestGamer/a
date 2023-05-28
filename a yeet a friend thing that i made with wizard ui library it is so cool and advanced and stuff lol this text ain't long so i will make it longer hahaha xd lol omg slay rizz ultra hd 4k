@@ -38,7 +38,6 @@ if _G.AutoThrow then
 wait(0.4)
 game:GetService("ReplicatedStorage").Remote.Throw.Server.Request:FireServer() end
 
-end
 end)
 
 PaidForFreeCheats:CreateToggle("Auto Rebirth", function(autorebirth)
