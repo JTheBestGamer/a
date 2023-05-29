@@ -8,10 +8,6 @@ SomeCheats:CreateButton("End Round", function()
 
 game:GetService("ReplicatedStorage").Action.SpecialUse:FireServer("End")
 
-end)SomeCheats:CreateButton("End Round", function()
-
-game:GetService("ReplicatedStorage").Action.SpecialUse:FireServer("End")
-
 end)
 
 SomeCheats:CreateButton("Grab Pull-up", function()
@@ -25,24 +21,27 @@ KillingCheats:CreateToggle("Auto Punch/Use Item", function(autopunch)
 _G.AutoPunch = autopunch
 
 if _G.AutoPunch then
+wait(0.5)
 game:GetService("ReplicatedStorage").UseItem:FireServer("Use")
 
 end)
 
-KillingCheats:CreateToggle("Attack Use (idk)", function(attackuse)
+KillingCheats:CreateToggle("Auto Attack Use (idk)", function(attackuse)
 
 _G.AttackUse = attackuse
 
 if _G.AttackUse then
+wait(0.5)
 game:GetService("ReplicatedStorage").Action.AttackUse:FireServer()
 
 end)
 
-KillingCheats:CreateToggle("Auto Uppercut", function(autoucut)
+KillingCheats:CreateToggle("Auto Uppercut (i think)", function(autoucut)
 
 _G.AutoUppercut = autoucut
 
 if _G.AutoUppercut then
+wait(0.5)
 game:GetService("ReplicatedStorage").Action.CharacterUse:FireServer("KiEnabled")
 
 end)
