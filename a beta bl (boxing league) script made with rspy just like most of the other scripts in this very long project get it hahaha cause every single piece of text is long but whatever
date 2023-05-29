@@ -1,0 +1,48 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Bad BL Gui")
+
+local SomeCheats = PhantomForcesWindow:NewSection("Some Stuff")
+
+SomeCheats:CreateButton("End Round", function()
+
+game:GetService("ReplicatedStorage").Action.SpecialUse:FireServer("End")
+
+end)SomeCheats:CreateButton("End Round", function()
+
+game:GetService("ReplicatedStorage").Action.SpecialUse:FireServer("End")
+
+end)
+
+SomeCheats:CreateButton("Grab Pull-up", function()
+
+workspace.Machinery.GRAB2.RemoteEvent:FireServer({"Interact"})
+
+end)
+
+KillingCheats:CreateToggle("Auto Punch/Use Item", function(autopunch)
+
+_G.AutoPunch = autopunch
+
+if _G.AutoPunch then
+game:GetService("ReplicatedStorage").UseItem:FireServer("Use")
+
+end)
+
+KillingCheats:CreateToggle("Attack Use (idk)", function(attackuse)
+
+_G.AttackUse = attackuse
+
+if _G.AttackUse then
+game:GetService("ReplicatedStorage").Action.AttackUse:FireServer()
+
+end)
+
+KillingCheats:CreateToggle("Auto Uppercut", function(autoucut)
+
+_G.AutoUppercut = autoucut
+
+if _G.AutoUppercut then
+game:GetService("ReplicatedStorage").Action.CharacterUse:FireServer("KiEnabled")
+
+end)
