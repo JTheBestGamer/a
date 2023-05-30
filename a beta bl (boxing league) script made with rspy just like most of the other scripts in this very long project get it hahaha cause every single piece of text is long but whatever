@@ -16,7 +16,7 @@ workspace.Machinery.GRAB2.RemoteEvent:FireServer({"Interact"})
 
 end)
 
-KillingCheats:CreateToggle("Auto Punch/Use Item", function(autopunch)
+SomeCheats:CreateToggle("Auto Punch/Use Item", function(autopunch)
 
 _G.AutoPunch = autopunch
 
@@ -24,9 +24,10 @@ if _G.AutoPunch then
 wait(0.5)
 game:GetService("ReplicatedStorage").UseItem:FireServer("Use")
 
+end
 end)
 
-KillingCheats:CreateToggle("Auto Attack Use (idk)", function(attackuse)
+SomeCheats:CreateToggle("Auto Attack Use (idk)", function(attackuse)
 
 _G.AttackUse = attackuse
 
@@ -34,9 +35,10 @@ if _G.AttackUse then
 wait(0.5)
 game:GetService("ReplicatedStorage").Action.AttackUse:FireServer()
 
+end
 end)
 
-KillingCheats:CreateToggle("Auto Uppercut (i think)", function(autoucut)
+SomeCheats:CreateToggle("Auto Uppercut (i think)", function(autoucut)
 
 _G.AutoUppercut = autoucut
 
@@ -44,4 +46,5 @@ if _G.AutoUppercut then
 wait(0.5)
 game:GetService("ReplicatedStorage").Action.CharacterUse:FireServer("KiEnabled")
 
+end
 end)
